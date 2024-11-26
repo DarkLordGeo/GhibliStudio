@@ -1,0 +1,98 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-content-wrapper{
+    width: auto;
+    /* height: 100vh; */
+    padding: 30px;
+}
+.main-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 2fr)); 
+    gap: 20px;  
+    height: auto;  
+    padding: 20px; 
+}
+
+.card{
+    padding: 2px 25px;
+    width: 200px;
+    height: 550px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: margin-top 0.3s ease , box-shadow 0.3s ease;
+    user-select: none;
+    background: linear-gradient(to bottom, #fff 50%, rgba(255, 255, 255, 0) 100%)
+}
+.card:hover{
+    margin-top: -5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.card p{
+    margin: 10px 0px;
+}
+.card-image img{
+    margin-top: 15px;
+    width: 200px;
+    border-radius: 5px;
+}
+.card-name{
+    display: flex;
+    justify-content:center;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+}
+.english-name{
+    font-size: 25px;
+}
+.orignal-name{
+    font-size: 20px;
+}
+#border{
+    /* font-size: 25px; */
+    width: 180px;
+    border-top: 1px solid gray;
+    /* color: gray; */
+}
+#year{
+    font-weight: bold;
+}
+.show-more{
+    font-size: 1.75rem;
+    width: 200px;
+    height: 50px;
+}
+@media (min-width:1020px){
+    .main-content-wrapper{
+        padding: 0px;
+    }
+    .main-content-grid{
+        place-items:center;
+        gap: 10px;
+    }
+    .filter-header h1{
+        font-size: 20px;
+    }
+}
+@media (min-width:991px){
+    .main-content-wrapper{
+        padding:0px;
+    }
+    .main-content-grid{
+        place-items: center;
+        gap: 0px;
+    }
+}
+@media (max-width:768px){
+    .main-content-wrapper{
+        padding: 0px;
+    }
+}

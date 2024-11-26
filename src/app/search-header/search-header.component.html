@@ -1,0 +1,10 @@
+<div class="background">
+  <div class="background-filter">
+    <h1 [ngClass]="{'resized': isFocused}">Ghibli Studio Library</h1>
+    <input type="text" placeholder="Search for Ghibli Studio products" 
+           [(ngModel)]="searchTerm" 
+           (input)="onSearch()" 
+           (focus)="onFocus()" 
+           (blur)="onBlur()">
+  </div>
+</div>

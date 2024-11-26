@@ -1,0 +1,48 @@
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 388px; 
+    z-index: 1;
+    background-image: url('/assets/images/Ghibli_SocialBanners_Facebook-Logo-Only-1-1024x388.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+.background-filter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.75rem;
+  background: rgba(0, 0, 0, 0.648);
+}
+.background-filter input {
+  width: 55%;
+  padding: 30px 40px;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.65rem;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.background-filter input:focus {
+  box-shadow: 0 0 0 5px #00aef0;
+  outline: none;
+}
+.background-filter input::placeholder{
+  color: rgba(128, 128, 128, 0.445);
+}
+.resized {
+  font-size: 3rem;
+  transition: font-size 0.3s ease;
+}
+.background-filter h1 {
+  margin-bottom: 20px;
+  transition: font-size 0.3s ease; 
+}

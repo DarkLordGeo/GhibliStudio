@@ -1,0 +1,58 @@
+<div class="filter-wrapper">
+    <div class="filter-author">
+      <div class="filter-header">
+        <h1>Filter by..</h1>
+      </div>
+      <div class="author-header">
+        <div class="auth-head">
+          <h2>Author</h2>
+        </div>
+        <div class="reset-text">
+          <button (click)="resetSelection()">Reset</button>
+        </div>
+      </div>
+      <span id="border"></span>
+      <div class="author-filter">
+        <div class="checkbox-container" *ngFor="let author of authors">
+          <div class="author-name">
+            <h3>{{ author.name }}</h3>
+          </div>
+          <div class="input-container">
+            <input 
+              type="radio" 
+              [(ngModel)]="selectedAuthor" 
+              [value]="author.name" 
+              name="author" 
+              (change)="onAuthorChange()">
+            <span class="checkmark"></span>
+          </div>
+          <div class="amount-of-products">
+            <p>{{ author.productCount }}</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-year">
+        <div class="year-header">
+          <h2>Release Year</h2>
+        </div>
+        <span id="border1"></span>
+        <div class="year-filter">
+          <div class="year-checkbox-container" *ngFor="let range of yearRanges">
+            <div class="release-year">
+              <h3>{{ range.range }}</h3>
+            </div>
+            <div class="input-container">
+              <input type="radio" [value]="range.range" name="year" [(ngModel)]="selectedYear" (change)="onYearChange()">
+              <span class="checkmark"></span>
+            </div>
+            <div class="amount-of-movies">
+              <p>{{ range.count }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+  

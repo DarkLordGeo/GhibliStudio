@@ -1,0 +1,209 @@
+.filter-wrapper{
+    padding: 20px;
+    height: 85vh;
+    width: 100%;
+}
+.filter-author{
+    display: flex;
+    justify-content:start;
+    align-items: start;
+    flex-direction: column;
+    gap: 25px;
+}
+.filter-header{
+    font-size: 1.5rem;
+}
+#border{
+    width: 100%;
+    border-top: 1px solid gray;
+}
+.author-filter{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 25px;
+}
+.author-name h3{
+    font-weight: 100;
+}
+.author-header{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+}
+.reset-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.reset-text button{
+    background-color: transparent;
+    border: none;
+    color: #00aef0;
+    height: 100%;
+    cursor: pointer;
+    font-size: 20px;
+}
+.reset-text button:hover{
+    text-decoration: underline;
+}
+.checkbox-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.checkbox-container input:checked{
+    background: #00aef0;
+}
+.amount-of-products{
+    color: gray;
+}
+.input-container {
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    z-index: 1;
+}
+.input-container input {
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    margin-top: -10px;
+}
+.input-container {
+    position: relative;
+    display: inline-block;
+  }
+  .checkmark {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border: 2px solid #00aef0;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  .input-container:hover input ~ .checkmark {
+    background-color: #e6f7fd;
+  }
+  .input-container input:checked ~ .checkmark {
+    background-color: #00aef0;
+    border-color: #00aef0;
+  }
+  .input-container input:checked ~ .checkmark:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .input-container input[type="radio"] {
+    opacity: 0; 
+    pointer-events: auto;
+  }
+  .amount-of-products{
+    margin-left: 15px;
+    margin-top: 2px;
+  }
+  /* year filter */
+
+  .filter-year{
+    margin-top: 25px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 25px;
+  }
+  #border1{
+    width: 100%;
+    border-top: 1px solid gray;
+    gap: 25px;
+  }
+  .year-checkbox-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.release-year h3{
+    font-weight: 100;
+}
+.amount-of-movies{
+    color: gray;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+.input-container {
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    position: relative;
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  .input-container input {
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+    margin-top: -10px;
+    pointer-events: auto;
+  }
+  
+  .input-container .checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border: 2px solid #00aef0;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  .input-container:hover input ~ .checkmark {
+    background-color: #e6f7fd;
+  }
+  
+  .input-container input:checked ~ .checkmark {
+    background-color: #00aef0;
+    border-color: #00aef0;
+  }
+  
+  .input-container input:checked ~ .checkmark:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  @media (min-width:1020px){
+    .filter-header h1{
+        font-size: 25px;
+    }
+}
