@@ -1,10 +1,10 @@
 *{
   font-family: Arial, Helvetica, sans-serif;
 }
-/* ::ng-deep * {
+::ng-deep * {
   margin: 0;
   padding: 0;
-} */
+}
 .row{
   display: flex;
   justify-content: center;
