@@ -39,7 +39,8 @@ app-main-content{
   height: 100vh;
 }
 
-@media (max-width:1024px){
+
+ @media (max-width:1024px){
   app-main-content{
     width: 70%;
   }
@@ -52,6 +53,21 @@ app-main-content{
     width: 40%;
   }
   app-filter-side{
-    width: 60%;
+    width: 50%;
+  }
+
+}
+@media (max-width:425px){
+  app-main-content{
+    width: 90%;
+  }
+  app-filter-side{
+    width: 90%;
+  }
+  .row{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
   }
 }

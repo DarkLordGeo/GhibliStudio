@@ -46,3 +46,21 @@
   margin-bottom: 20px;
   transition: font-size 0.3s ease; 
 }
+@media (max-width:768px){
+  .background-filter h1{
+    font-size: 30px;
+  }
+  .background-filter input{
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+}
+@media (max-width:425px){
+  .background-filter h1{
+    font-size: 25px;
+  }
+  .background-filter input{
+    padding: 20px 50px;
+    font-size: 18px;
+  }
+}

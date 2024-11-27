@@ -78,21 +78,25 @@
         place-items:center;
         gap: 10px;
     }
-    .filter-header h1{
-        font-size: 20px;
-    }
 }
 @media (min-width:991px){
     .main-content-wrapper{
         padding:0px;
     }
     .main-content-grid{
+        gap: 0px;
+        place-items: center;
+    }
+    /* .main-content-grid{
         place-items: center;
         gap: 0px;
-    }
+    } */
 }
 @media (max-width:768px){
     .main-content-wrapper{
         padding: 0px;
+    }
+    .main-content-grid{
+        place-items: center;
     }
 }
