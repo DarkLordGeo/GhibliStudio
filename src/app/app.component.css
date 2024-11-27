@@ -8,9 +8,9 @@
 .row{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 .main-container{
   display: flex;
@@ -36,7 +36,7 @@ app-filter-side{
 }
 app-main-content{
   width: 80%;
-  height: 100vh;
+  height: auto;
 }
 
 
@@ -50,16 +50,22 @@ app-main-content{
 }
 @media (max-width:768px){
   app-main-content{
-    width: 40%;
+    margin-top: 25px;
+    width: 100%;
   }
   app-filter-side{
-    width: 50%;
+    width: 100%;
+  }
+  .row{
+    flex-direction: column;
   }
 
 }
 @media (max-width:425px){
   app-main-content{
     width: 90%;
+    place-items: center;
+    margin-top: 25px;
   }
   app-filter-side{
     width: 90%;
@@ -68,6 +74,5 @@ app-main-content{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
   }
 }
