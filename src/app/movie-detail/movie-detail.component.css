@@ -47,6 +47,7 @@
   justify-content: start;
   align-items: start;
   flex-direction: column;
+  
 }
 .movie-image img{
   width: 450px;
@@ -130,6 +131,7 @@
   gap: 10px;
   font-size: 23px;
   margin-bottom: 20px;
+  padding-bottom: 50px;
 }
 .rotten{
   font-weight: bold;
