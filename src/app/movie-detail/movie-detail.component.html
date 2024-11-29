@@ -1,0 +1,73 @@
+<div class="banner-container" [ngStyle]="{'background-image': 'url(' + movie.movie_banner + ')'}">
+    <div class="banner-wrapper">
+      <div class="button-container">
+        <button (click)="goBack()">Back</button>
+      </div>
+    </div>
+  </div>
+  <div class="movie-detail-container">
+    <div class="movie-detail">
+      <div class="movie-image">
+        <img [src]="movie.image" alt="Movie image">
+      </div>
+      <div class="movie-information">
+        <div class="movie-english-name">
+          <p>{{ movie.title }}</p> 
+        </div>
+        <div class="movie-original-name">
+          <p>{{ movie.original_title }}</p>
+        </div>
+        <div class="movie-director">
+          <div class="author-cont">
+            <p>Author:</p> 
+          </div>
+          <div class="author-name">
+            <p>{{ movie.director }}</p> 
+          </div>
+        </div>
+        <div class="movie-producer">
+          <div class="producer">
+            <p>Producer:</p> 
+          </div>
+          <div class="producer-name">
+            <p>{{ movie.producer }}</p> 
+          </div>
+        </div>
+        <div class="movie-release-date">
+          <div class="release">
+            <p>Release date:</p> 
+          </div>
+          <div class="date">
+            <p>{{ movie.release_date }}</p>
+          </div>
+        </div>
+        <div class="running-time">
+          <div class="running">
+            <p>Running Time:</p> 
+          </div>
+          <div class="running-time-text">
+            <p>{{ movie.running_time }} minutes</p> 
+          </div>
+        </div>
+        <div class="movie-description">
+          <div class="description-label">
+            <p>Description:</p> 
+          </div>
+          <div class="description-text">
+            <p>{{ movie.description }}</p> 
+          </div>
+        </div>
+        <div class="rotten-tomatoes">
+          <div class="rotten">
+            <p>Rotten Tomatoes: </p>
+          </div>
+          
+          <div class="rating">
+            <p>{{ movie.rt_score }}%</p>
+          </div>
+        </div>
+        
+      </div>      
+    </div>
+  </div>
+  

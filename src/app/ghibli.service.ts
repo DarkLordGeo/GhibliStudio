@@ -7,17 +7,20 @@ import { Author } from '../app/author';
   providedIn: 'root'
 })
 export class GhibliService {
-
   private apiUrl = 'https://ghibliapi.vercel.app/films'; 
 
   constructor(private http: HttpClient) {}
 
   getFilms(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl); 
+    return this.http.get<any[]>(this.apiUrl);
+  }
+
+  getFilmById(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`); 
   }
 
   getAuthorsAndFilmCount(films: any[]): Author[] {
-    const authors: Author[] = []; 
+    const authors: Author[] = [];
 
     films.forEach((film: any) => {
       const director = film.director;
@@ -26,9 +29,10 @@ export class GhibliService {
       if (existingAuthor) {
         existingAuthor.productCount++;
       } else {
-        authors.push({ name: director, productCount: 1 }); 
+        authors.push({ name: director, productCount: 1 });
       }
     });
+
     return authors;
   }
 }

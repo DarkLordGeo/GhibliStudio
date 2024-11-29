@@ -1,10 +1,12 @@
 <div class="main-container">
+  <div *ngIf="!isMovieDetailPage" id="width">
     <div class="app-header-container">
-        <app-search-header></app-search-header>
+      <app-search-header></app-search-header>
     </div>
     <div class="row">
-        <app-filter-side></app-filter-side>
-        <app-main-content></app-main-content>
+      <app-filter-side></app-filter-side>
+      <app-main-content></app-main-content>
     </div>
+  </div>
+  <router-outlet></router-outlet>
 </div>
-

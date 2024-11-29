@@ -1,23 +1,25 @@
 <div class="main-content-wrapper">
   <div class="main-content-grid">
     <div *ngFor="let film of filteredCards" class="card">
-      <div class="card-image">
-        <img [src]="film.image" alt="{{ film.title }}">
-      </div>
-      <div class="card-name">
-        <div class="english-name">{{ film.title }}</div>
-        <span id="border"></span>
-        <div class="original-name">{{ film.original_title }}</div>
-      </div>
-      <div class="card-year">
-        <p><span id="year">Year: </span>{{ film.release_date }}</p>
-      </div>
-      <div class="card-director">
-        <p>{{ film.director }}</p>
-      </div>
-      <div class="card-description">
-        <p>{{ film.description }}</p>
-      </div>
+      <a [routerLink]="['/movie', film.id]" class="card-link">
+        <div class="card-image">
+          <img [src]="film.image" alt="{{ film.title }}">
+        </div>
+        <div class="card-name">
+          <div class="english-name">{{ film.title }}</div>
+          <span id="border"></span>
+          <div class="original-name">{{ film.original_title }}</div>
+        </div>
+        <div class="card-year">
+          <p><span id="year">Year: </span>{{ film.release_date }}</p>
+        </div>
+        <div class="card-director">
+          <p>{{ film.director }}</p>
+        </div>
+        <div class="card-description">
+          <p>{{ film.description }}</p>
+        </div>
+      </a>
     </div>
   </div>
 </div>
